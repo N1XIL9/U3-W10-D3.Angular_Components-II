@@ -11,19 +11,19 @@ export class MainComponent implements OnInit {
       name: 'Daniela',
       lastName: 'De Filippo',
       city: 'Sydney',
-      number: 61345657647,
+      number: '61345657647',
     },
     {
       name: 'Bruno',
       lastName: 'Stano',
       city: 'Ginevra',
-      number: 4145657647,
+      number: '4145657647',
     },
     {
       name: 'Giovanni',
       lastName: 'Urso',
       city: 'Hong Kong',
-      number: 3445657647,
+      number: '3445657647',
     },
   ];
 
