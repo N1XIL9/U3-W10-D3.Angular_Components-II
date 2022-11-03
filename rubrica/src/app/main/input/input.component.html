@@ -1,18 +1,21 @@
 <div class="row mb-5 m-4">
   <input
     type="text"
+    [(ngModel)]="newContact.name"
     aria-label="First name"
     class="form-control col mx-2"
     placeholder="Name..."
   />
   <input
     type="text"
+    [(ngModel)]="newContact.lastName"
     aria-label="Last name"
     class="form-control col mx-2"
     placeholder="Surname..."
   />
   <input
     type="text"
+    [(ngModel)]="newContact.city"
     aria-label="City"
     class="form-control col mx-2"
     placeholder="City..."
@@ -20,9 +23,13 @@
 
   <input
     type="text"
+    [(ngModel)]="newContact.number"
     aria-label="number"
     class="form-control col mx-2"
     placeholder="Phone..."
+    (keyup.enter)="insert()"
   />
-  <button type="button" class="btn btn-dark col">Add contact</button>
+  <button (click)="insert()" type="button" class="btn btn-dark col">
+    Add contact
+  </button>
 </div>

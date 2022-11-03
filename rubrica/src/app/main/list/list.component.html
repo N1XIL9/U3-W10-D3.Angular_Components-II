@@ -13,10 +13,18 @@
       <td>{{ item.lastName }}</td>
       <td>{{ item.city }}</td>
       <td>{{ item.number }}</td>
-      <button type="button" class="btn btn-danger btn-sm mx-1">
-        <i class="bi bi-trash"></i>
+      <button
+        (click)="removeItem(item)"
+        type="button"
+        class="btn btn-danger btn-sm mx-1"
+      >
+        <i class="bi bi-trash-fill text-dark"></i>
       </button>
-      <button type="button" class="btn btn-warning btn-sm mx-1">
+      <button
+        (click)="showItem(item)"
+        type="button"
+        class="btn btn-warning btn-sm mx-1"
+      >
         <i class="bi bi-info-lg"></i>
       </button>
     </tr>

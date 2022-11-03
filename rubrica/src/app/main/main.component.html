@@ -1,10 +1,14 @@
-<app-input></app-input>
+<app-input (insertItem)="onInsert($event)"></app-input>
 
 <div class="row">
   <div class="col">
-    <app-list [contatti]="lista"></app-list>
+    <app-list
+      [contatti]="lista"
+      (deleteItem)="onRemoveItem($event)"
+      (showInfo)="onShowItem($event)"
+    ></app-list>
   </div>
-  <div class="col">
-    <app-details></app-details>
+  <div class="col" *ngIf="showItem">
+    <app-details [contact]="showItem"></app-details>
   </div>
 </div>
